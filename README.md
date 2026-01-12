@@ -19,9 +19,11 @@
 
 ## Структура проекта
 
-main.cpp
-physics_sim.h
-physics_sim.cpp
+main.cpp - главный файл
+
+physics_sim.h - заголовочный файл
+
+physics_sim.cpp - модуль логики симуляций
 
 ## Сборка и запуск
 ```
