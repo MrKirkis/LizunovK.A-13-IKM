@@ -21,7 +21,7 @@ std::vector<SimResult> simulateSpring(double mass, double k, double x0, double t
     
     const double omega_sq = k / mass;  // ω² = k/m
     
-    for (double t = 0; t <= t_lim + dt/2; t += dt) {
+    for (double t = 0; t <= t_lim; t += dt) {
         results.push_back({t, x, v});
         double acceleration = -omega_sq * x;
         v += acceleration * dt;
@@ -45,4 +45,5 @@ std::vector<SimResult> simulateConstantAccel(double x0, double v0, double a, dou
 std::vector<SimResult> simulateChargeInField(double q, double m, double E, double t_lim, double dt) {
     double acceleration = (q * E) / m; // Второй закон Ньютона для заряда
     return simulateConstantAccel(0, 0, acceleration, t_lim, dt);
+
 }
